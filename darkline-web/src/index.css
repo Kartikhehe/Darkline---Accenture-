@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Theme tokens. Dark is the design's native mode; light is a derived mode that
+ * preserves the one thing that must survive a theme switch — the visible
+ * separation between measured and inferred values (Rule 1).
+ *
+ * In light mode "measured" cannot be white, so it becomes near-black: the
+ * convention is the *contrast* between the two, not the literal colour white.
+ * Cyan is darkened to #0E7C8C to stay legible on a light ground while reading
+ * as unmistakably the same hue.
+ */
+@layer base {
+  :root,
+  :root[data-theme='dark'] {
+    color-scheme: dark;
+    --bg: #0B0C14;
+    --panel: #12131F;
+    --card: #1A1B2B;
+    --border: #252639;
+    --accent: #A100FF;
+    --accent-lt: #C98BFF;
+    --amber: #FF9E1B;
+    --red: #FF4D57;
+    --green: #00D68F;
+    --cyan: #37D3E8;
+    --text-1: #F2F2F7;
+    --text-2: #9A9BB0;
+    --text-3: #83849B;
+    /* Chart-only tokens: series ink and axis furniture. */
+    --series-ink: #F2F2F7;
+    --scrollbar-thumb: #252639;
+    --scrollbar-thumb-hover: #35364d;
+  }
+
+  :root[data-theme='light'] {
+    color-scheme: light;
+    --bg: #F7F7FA;
+    --panel: #FFFFFF;
+    --card: #F1F1F6;
+    --border: #DCDCE6;
+    --accent: #7B00C4;
+    --accent-lt: #5B0091;
+    --amber: #A85D00;
+    --red: #C42630;
+    --green: #007A52;
+    --cyan: #0E7C8C;
+    --text-1: #14141C;
+    --text-2: #55566B;
+    --text-3: #62637A;
+    --series-ink: #14141C;
+    --scrollbar-thumb: #DCDCE6;
+    --scrollbar-thumb-hover: #C2C3D2;
+  }
+
+  html, body, #root { height: 100%; }
+  body {
+    @apply bg-bg text-text-1 font-sans;
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 5px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
+}
+
+@layer components {
+  .label {
+    @apply text-label uppercase tracking-[0.08em] text-text-3 font-medium;
+  }
+  .panel { @apply bg-panel border border-border rounded-card; }
+  .card-raised { @apply bg-card border border-border rounded-card; }
+  .num { @apply font-mono tabular-nums; }
+  /* Rule 1: inferred values are cyan + dotted underline; measured take the
+     highest-contrast text colour of the active theme. */
+  .inferred {
+    @apply font-mono tabular-nums text-cyan;
+    text-decoration: underline dotted currentColor;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  .measured { @apply font-mono tabular-nums text-text-1; }
+}

@@ -1,0 +1,8 @@
+{
+ "pr_auc_without_dark": 0.169,
+ "pr_auc_with_dark": 0.214,
+ "delta": 0.045,
+ "relative_pct": 26.6,
+ "n_dark_features": 41,
+ "verdict": "Reconstructed dwell features from unmeasured stations raise held-out PR-AUC by 26.6% relative, indicating the blind zone carries recoverable signal."
+}

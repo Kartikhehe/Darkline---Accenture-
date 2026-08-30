@@ -1,0 +1,458 @@
+{
+ "split_sizes": {
+  "train": 828623,
+  "val": 177562,
+  "test": 177562
+ },
+ "test_failure_rate": 0.0058,
+ "pr_auc": 0.214,
+ "pr_auc_ci": [
+  0.191,
+  0.238
+ ],
+ "mcc": 0.281,
+ "threshold": 0.732,
+ "n_alerts": 648,
+ "precision": 0.332,
+ "recall": 0.209,
+ "lift_over_random": 36.9,
+ "precision_at_50": 0.62,
+ "precision_at_100": 0.54,
+ "precision_at_500": 0.36,
+ "precision_at_1000": 0.24,
+ "pr_curve": {
+  "precision": [
+   0.428,
+   0.4115,
+   0.3957,
+   0.3805,
+   0.3659,
+   0.3519,
+   0.3384,
+   0.3254,
+   0.313,
+   0.301,
+   0.2895,
+   0.2785,
+   0.2679,
+   0.2577,
+   0.2479,
+   0.2385,
+   0.2295,
+   0.2208,
+   0.2124,
+   0.2044,
+   0.1967,
+   0.1893,
+   0.1822,
+   0.1754,
+   0.1688,
+   0.1625,
+   0.1565,
+   0.1506,
+   0.145,
+   0.1397,
+   0.1345,
+   0.1295,
+   0.1248,
+   0.1202,
+   0.1158,
+   0.1116,
+   0.1075,
+   0.1036,
+   0.0999,
+   0.0963,
+   0.0928,
+   0.0895,
+   0.0863,
+   0.0832,
+   0.0803,
+   0.0774,
+   0.0747,
+   0.0721,
+   0.0696,
+   0.0672,
+   0.0648,
+   0.0626,
+   0.0605,
+   0.0584,
+   0.0564,
+   0.0545,
+   0.0527,
+   0.051,
+   0.0493,
+   0.0477,
+   0.0461
+  ],
+  "recall": [
+   0,
+   0.017,
+   0.033,
+   0.05,
+   0.067,
+   0.083,
+   0.1,
+   0.117,
+   0.133,
+   0.15,
+   0.167,
+   0.183,
+   0.2,
+   0.217,
+   0.233,
+   0.25,
+   0.267,
+   0.283,
+   0.3,
+   0.317,
+   0.333,
+   0.35,
+   0.367,
+   0.383,
+   0.4,
+   0.417,
+   0.433,
+   0.45,
+   0.467,
+   0.483,
+   0.5,
+   0.517,
+   0.533,
+   0.55,
+   0.567,
+   0.583,
+   0.6,
+   0.617,
+   0.633,
+   0.65,
+   0.667,
+   0.683,
+   0.7,
+   0.717,
+   0.733,
+   0.75,
+   0.767,
+   0.783,
+   0.8,
+   0.817,
+   0.833,
+   0.85,
+   0.867,
+   0.883,
+   0.9,
+   0.917,
+   0.933,
+   0.95,
+   0.967,
+   0.983,
+   1
+  ]
+ },
+ "calibration": [
+  {
+   "predicted": 0.05,
+   "observed": 0.032,
+   "n": 2776
+  },
+  {
+   "predicted": 0.15,
+   "observed": 0.134,
+   "n": 1209
+  },
+  {
+   "predicted": 0.25,
+   "observed": 0.26,
+   "n": 1934
+  },
+  {
+   "predicted": 0.35,
+   "observed": 0.368,
+   "n": 1006
+  },
+  {
+   "predicted": 0.45,
+   "observed": 0.404,
+   "n": 1246
+  },
+  {
+   "predicted": 0.55,
+   "observed": 0.613,
+   "n": 904
+  },
+  {
+   "predicted": 0.65,
+   "observed": 0.629,
+   "n": 1645
+  },
+  {
+   "predicted": 0.75,
+   "observed": 0.754,
+   "n": 2053
+  },
+  {
+   "predicted": 0.85,
+   "observed": 0.796,
+   "n": 1260
+  },
+  {
+   "predicted": 0.95,
+   "observed": 0.961,
+   "n": 727
+  }
+ ],
+ "cost_curve": [
+  {
+   "threshold": 0.025,
+   "n_alerts": 9761,
+   "escapes": 65,
+   "cost": 12036
+  },
+  {
+   "threshold": 0.05,
+   "n_alerts": 8943,
+   "escapes": 126,
+   "cost": 13353
+  },
+  {
+   "threshold": 0.075,
+   "n_alerts": 8194,
+   "escapes": 182,
+   "cost": 14564
+  },
+  {
+   "threshold": 0.1,
+   "n_alerts": 7508,
+   "escapes": 236,
+   "cost": 15768
+  },
+  {
+   "threshold": 0.125,
+   "n_alerts": 6879,
+   "escapes": 286,
+   "cost": 16889
+  },
+  {
+   "threshold": 0.15,
+   "n_alerts": 6302,
+   "escapes": 333,
+   "cost": 17957
+  },
+  {
+   "threshold": 0.175,
+   "n_alerts": 5774,
+   "escapes": 377,
+   "cost": 18969
+  },
+  {
+   "threshold": 0.2,
+   "n_alerts": 5290,
+   "escapes": 418,
+   "cost": 19920
+  },
+  {
+   "threshold": 0.225,
+   "n_alerts": 4847,
+   "escapes": 456,
+   "cost": 20807
+  },
+  {
+   "threshold": 0.25,
+   "n_alerts": 4441,
+   "escapes": 492,
+   "cost": 21661
+  },
+  {
+   "threshold": 0.275,
+   "n_alerts": 4069,
+   "escapes": 526,
+   "cost": 22479
+  },
+  {
+   "threshold": 0.3,
+   "n_alerts": 3728,
+   "escapes": 558,
+   "cost": 23258
+  },
+  {
+   "threshold": 0.325,
+   "n_alerts": 3416,
+   "escapes": 588,
+   "cost": 23996
+  },
+  {
+   "threshold": 0.35,
+   "n_alerts": 3130,
+   "escapes": 615,
+   "cost": 24655
+  },
+  {
+   "threshold": 0.375,
+   "n_alerts": 2867,
+   "escapes": 641,
+   "cost": 25302
+  },
+  {
+   "threshold": 0.4,
+   "n_alerts": 2627,
+   "escapes": 666,
+   "cost": 25937
+  },
+  {
+   "threshold": 0.425,
+   "n_alerts": 2407,
+   "escapes": 689,
+   "cost": 26522
+  },
+  {
+   "threshold": 0.45,
+   "n_alerts": 2205,
+   "escapes": 710,
+   "cost": 27055
+  },
+  {
+   "threshold": 0.475,
+   "n_alerts": 2021,
+   "escapes": 730,
+   "cost": 27571
+  },
+  {
+   "threshold": 0.5,
+   "n_alerts": 1851,
+   "escapes": 749,
+   "cost": 28066
+  },
+  {
+   "threshold": 0.525,
+   "n_alerts": 1696,
+   "escapes": 767,
+   "cost": 28541
+  },
+  {
+   "threshold": 0.55,
+   "n_alerts": 1554,
+   "escapes": 784,
+   "cost": 28994
+  },
+  {
+   "threshold": 0.575,
+   "n_alerts": 1424,
+   "escapes": 799,
+   "cost": 29389
+  },
+  {
+   "threshold": 0.6,
+   "n_alerts": 1305,
+   "escapes": 814,
+   "cost": 29795
+  },
+  {
+   "threshold": 0.625,
+   "n_alerts": 1195,
+   "escapes": 827,
+   "cost": 30140
+  },
+  {
+   "threshold": 0.65,
+   "n_alerts": 1095,
+   "escapes": 840,
+   "cost": 30495
+  },
+  {
+   "threshold": 0.675,
+   "n_alerts": 1003,
+   "escapes": 852,
+   "cost": 30823
+  },
+  {
+   "threshold": 0.7,
+   "n_alerts": 919,
+   "escapes": 863,
+   "cost": 31124
+  },
+  {
+   "threshold": 0.725,
+   "n_alerts": 842,
+   "escapes": 874,
+   "cost": 31432
+  },
+  {
+   "threshold": 0.75,
+   "n_alerts": 772,
+   "escapes": 883,
+   "cost": 31677
+  },
+  {
+   "threshold": 0.775,
+   "n_alerts": 707,
+   "escapes": 893,
+   "cost": 31962
+  },
+  {
+   "threshold": 0.8,
+   "n_alerts": 648,
+   "escapes": 901,
+   "cost": 32183
+  },
+  {
+   "threshold": 0.825,
+   "n_alerts": 594,
+   "escapes": 909,
+   "cost": 32409
+  },
+  {
+   "threshold": 0.85,
+   "n_alerts": 544,
+   "escapes": 917,
+   "cost": 32639
+  },
+  {
+   "threshold": 0.875,
+   "n_alerts": 498,
+   "escapes": 924,
+   "cost": 32838
+  },
+  {
+   "threshold": 0.9,
+   "n_alerts": 457,
+   "escapes": 931,
+   "cost": 33042
+  },
+  {
+   "threshold": 0.925,
+   "n_alerts": 418,
+   "escapes": 937,
+   "cost": 33213
+  },
+  {
+   "threshold": 0.95,
+   "n_alerts": 383,
+   "escapes": 943,
+   "cost": 33388
+  },
+  {
+   "threshold": 0.975,
+   "n_alerts": 351,
+   "escapes": 948,
+   "cost": 33531
+  },
+  {
+   "threshold": 1,
+   "n_alerts": 322,
+   "escapes": 953,
+   "cost": 33677
+  }
+ ],
+ "cost_optimal": {
+  "threshold": 0.025,
+  "n_alerts": 9761,
+  "escapes": 65,
+  "cost": 12036
+ },
+ "leakage_controls": [
+  "Temporal split by first_timestamp — no random shuffling, no stratification",
+  "Feature selection performed in-fold on training data only",
+  "Operating threshold fixed on the validation split before test was touched",
+  "Test split scored exactly once",
+  "Scores isotonic-calibrated on validation, not on test"
+ ]
+}

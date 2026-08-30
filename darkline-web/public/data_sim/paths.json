@@ -1,0 +1,77 @@
+{
+ "paths": [
+  {
+   "path_signature": "L0_S20|L1_S30|L3_S40",
+   "n": 180000,
+   "fail_rate": 0.0095,
+   "median_cycle": 11.41
+  },
+  {
+   "path_signature": "L1_S21|L2_S31|L3_S41",
+   "n": 114773,
+   "fail_rate": 0.0041,
+   "median_cycle": 6.95
+  },
+  {
+   "path_signature": "L2_S22|L3_S32|L3_S42",
+   "n": 73183,
+   "fail_rate": 0.0095,
+   "median_cycle": 6.16
+  },
+  {
+   "path_signature": "L3_S23|L0_S33|L3_S43",
+   "n": 46663,
+   "fail_rate": 0.009,
+   "median_cycle": 11.87
+  },
+  {
+   "path_signature": "L0_S24|L1_S34|L3_S44",
+   "n": 29754,
+   "fail_rate": 0.0027,
+   "median_cycle": 11.05
+  },
+  {
+   "path_signature": "L1_S25|L2_S35|L3_S45",
+   "n": 18972,
+   "fail_rate": 0.0057,
+   "median_cycle": 9.12
+  },
+  {
+   "path_signature": "L2_S26|L3_S36|L3_S46",
+   "n": 12097,
+   "fail_rate": 0.0158,
+   "median_cycle": 5.4
+  },
+  {
+   "path_signature": "L3_S27|L0_S37|L3_S47",
+   "n": 7713,
+   "fail_rate": 0.0035,
+   "median_cycle": 12.71
+  },
+  {
+   "path_signature": "L0_S28|L1_S38|L3_S48",
+   "n": 4918,
+   "fail_rate": 0.0087,
+   "median_cycle": 15.14
+  },
+  {
+   "path_signature": "L1_S29|L2_S39|L3_S49",
+   "n": 3136,
+   "fail_rate": 0.0048,
+   "median_cycle": 15.71
+  },
+  {
+   "path_signature": "L2_S30|L3_S40|L3_S50",
+   "n": 2000,
+   "fail_rate": 0.0041,
+   "median_cycle": 13.86
+  },
+  {
+   "path_signature": "L3_S31|L0_S41|L3_S51",
+   "n": 1275,
+   "fail_rate": 0.0067,
+   "median_cycle": 15.11
+  }
+ ],
+ "note": "Failure rate varies materially by routing path. Any pass/fail comparison that does not control for path_signature is confounded by routing mix."
+}

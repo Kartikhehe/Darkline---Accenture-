@@ -1,0 +1,4 @@
+{
+ "found": false,
+ "note": "No statistically clean drift event was found in this dataset. A change-point requires a stable pre-regime, a PELT-detected shift, and at least one physically independent corroborating signal verified stable across the window. No candidate met all three conditions, so none is shown."
+}
