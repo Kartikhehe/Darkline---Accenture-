@@ -89,11 +89,16 @@ export interface ModelReport {
 }
 
 export interface Ablation {
-  pr_auc_without_dark: number
-  pr_auc_with_dark: number
+  // The generated bundle names these *_lowcov (low-coverage stations); earlier
+  // drafts used *_dark. Accept both and normalise in the loader.
+  pr_auc_without_dark?: number
+  pr_auc_with_dark?: number
+  n_dark_features?: number
+  pr_auc_without_lowcov?: number
+  pr_auc_with_lowcov?: number
+  n_lowcov_features?: number
   delta: number
   relative_pct: number
-  n_dark_features: number
   verdict: string
 }
 

@@ -41,7 +41,16 @@ export const loadLineOverview = () => loadJSON<LineOverview>('line_overview.json
 export const loadReconstruction = () => loadJSON<ReconstructionEval>('reconstruction_eval.json')
 export const loadConstraint = () => loadJSON<Constraint>('constraint.json')
 export const loadModelReport = () => loadJSON<ModelReport>('model_report.json')
-export const loadAblation = () => loadJSON<Ablation>('ablation.json')
+export const loadAblation = async (): Promise<Ablation> => {
+  const a = await loadJSON<Ablation>('ablation.json')
+  // Normalise the two field-name variants onto one shape for the UI.
+  return {
+    ...a,
+    pr_auc_without_dark: a.pr_auc_without_dark ?? a.pr_auc_without_lowcov,
+    pr_auc_with_dark: a.pr_auc_with_dark ?? a.pr_auc_with_lowcov,
+    n_dark_features: a.n_dark_features ?? a.n_lowcov_features,
+  }
+}
 export const loadDrift = () => loadJSON<Drift>('drift.json')
 export const loadPaths = () => loadJSON<Paths>('paths.json')
 

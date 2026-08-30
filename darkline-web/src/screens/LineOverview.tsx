@@ -55,7 +55,7 @@ export default function LineOverview() {
     <>
       <ScreenHeader
         title="Line Overview"
-        subtitle="Every station on the line, and which of them the plant can actually see. Dwell at unmeasured stations is reconstructed from neighbouring timestamps and rendered as an inferred value."
+        subtitle="Every station on the line, and which of them the plant can actually see. Dwell at unmeasured stations is reconstructed from neighbouring timestamps and rendered as an inferred value. In this dataset the unmeasured share is small — the figures below are what the data shows, not what the concept assumes."
       />
 
       <div className="grid grid-cols-4 gap-3 mb-5">
@@ -169,11 +169,12 @@ export default function LineOverview() {
                 </div>
                 <div>
                   <div className="label mb-1.5">Delta</div>
-                  <span className="num text-[22px] text-green">
-                    +{fmt(ablation.delta, 3)}
+                  {/* A null result is a finding: render it neutrally, never as a gain. */}
+                  <span className={`num text-[22px] ${ablation.delta > 0 ? 'text-green' : 'text-text-2'}`}>
+                    {ablation.delta > 0 ? '+' : ''}{fmt(ablation.delta, 5)}
                   </span>
-                  <div className="text-[11px] text-green/80 num mt-0.5">
-                    +{fmt(ablation.relative_pct, 1)}% rel.
+                  <div className={`text-[11px] num mt-0.5 ${ablation.delta > 0 ? 'text-green/80' : 'text-text-3'}`}>
+                    {ablation.delta > 0 ? '+' : ''}{fmt(ablation.relative_pct, 1)}% rel.
                   </div>
                 </div>
               </div>
